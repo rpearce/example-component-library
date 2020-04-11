@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it works 1`] = `
+<DocumentFragment>
+  <svg
+    class="rl-circle"
+    height="20"
+    viewBox="0 0 100 100"
+    width="20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="50"
+      cy="50"
+      r="50"
+    />
+  </svg>
+</DocumentFragment>
+`;

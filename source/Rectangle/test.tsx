@@ -3,6 +3,6 @@ import { render } from '@testing-library/react'
 import Rect from './index'
 
 test('it works', () => {
-  const { asFragment } = render(<Rect sizeA={10} sizeB={20} />)
+  const { asFragment } = render(<Rect width={10} height={20} />)
   expect(asFragment()).toMatchSnapshot()
 })

@@ -4,11 +4,11 @@ import { withA11y } from '@storybook/addon-a11y'
 import { color, number, text, withKnobs } from '@storybook/addon-knobs'
 import '../../.storybook/base.css'
 import './styles.css'
-import { Rectangle } from '../../dist/esm'
+import { Circle } from '../../dist/esm'
 
-const stories = storiesOf('Rectangle', module)
+const stories = storiesOf('Circle', module)
 
 stories.addDecorator(withA11y)
 stories.addDecorator(withKnobs)
 
-stories.add('default', () => <Rectangle />)
+stories.add('default', () => <Circle size={150} />)
