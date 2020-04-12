@@ -1,18 +1,23 @@
 import React, { FC } from 'react'
 
 interface Props {
+  desc?: string
   height: number
+  title?: string
   width: number
 }
 
-const Rectangle: FC<Props> = ({ height, width }) => (
+const Rectangle: FC<Props> = ({ desc, height, title, width }) => (
   <svg
     className="rl-rect"
     height={height}
+    role="img"
     viewBox={`0 0 ${width} ${height}`}
     width={width}
     xmlns="http://www.w3.org/2000/svg"
   >
+    {title && <title>{title}</title>}
+    {desc && <desc>{desc}</desc>}
     <rect width={width} height={height} />
   </svg>
 )
