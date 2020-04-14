@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`with all props 1`] = `
+exports[`with no props 1`] = `
 <DocumentFragment>
   <svg
-    class="rl-circle"
-    fill="#30336b"
+    class="rl-rectangircle__circle"
+    fill="#7ed6df"
     height="200"
     role="img"
     viewBox="0 0 100 100"
@@ -23,23 +23,24 @@ exports[`with all props 1`] = `
       r="50"
     />
   </svg>
-</DocumentFragment>
-`;
-
-exports[`without title & desc & fill 1`] = `
-<DocumentFragment>
   <svg
-    class="rl-circle"
-    height="200"
+    class="rl-rectangircle__rect"
+    fill="#30336b"
+    height="100"
     role="img"
-    viewBox="0 0 100 100"
-    width="200"
+    viewBox="0 0 400 100"
+    width="400"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <circle
-      cx="50"
-      cy="50"
-      r="50"
+    <title>
+      Minimalist building
+    </title>
+    <desc>
+      A rectangle that is 4 times taller than it is wide
+    </desc>
+    <rect
+      height="100"
+      width="400"
     />
   </svg>
 </DocumentFragment>

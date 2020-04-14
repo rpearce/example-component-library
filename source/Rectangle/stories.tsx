@@ -20,5 +20,3 @@ stories.add('default', () => (
     title={text('title', 'Minimalist fallen structure')}
   />
 ))
-
-

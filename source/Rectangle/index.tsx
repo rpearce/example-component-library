@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 
 interface Props {
+  className?: string
   desc?: string
   fill?: string
   height: number
@@ -8,9 +9,16 @@ interface Props {
   width: number
 }
 
-const Rectangle: FC<Props> = ({ desc, fill, height, title, width }) => (
+const Rectangle: FC<Props> = ({
+  className,
+  desc,
+  fill,
+  height,
+  title,
+  width,
+}) => (
   <svg
-    className="rl-rect"
+    className={className || 'rl-rect'}
     fill={fill}
     height={height}
     role="img"

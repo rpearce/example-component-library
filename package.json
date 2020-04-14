@@ -81,7 +81,5 @@
     "react": "*",
     "react-dom": "*"
   },
-  "dependencies": {
-    "react-use": "14.1.1"
-  }
+  "dependencies": {}
 }

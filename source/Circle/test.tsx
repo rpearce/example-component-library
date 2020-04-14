@@ -5,13 +5,18 @@ import Circle from './index'
 
 test('with all props', () => {
   const { asFragment } = render(
-    <Circle desc="A blue circle" size={200} title="Water planet" />
+    <Circle
+      desc="A blue circle"
+      fill="#30336b"
+      size={200}
+      title="Water planet"
+    />
   )
 
   expect(asFragment()).toMatchSnapshot()
 })
 
-test('without title & desc', () => {
+test('without title & desc & fill', () => {
   const { asFragment } = render(<Circle size={200} />)
 
   expect(asFragment()).toMatchSnapshot()

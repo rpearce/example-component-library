@@ -1,15 +1,16 @@
 import React, { FC } from 'react'
 
 interface Props {
+  className?: string
   desc?: string
   fill?: string
   size: number
   title?: string
 }
 
-const Circle: FC<Props> = ({ desc, fill, size, title }) => (
+const Circle: FC<Props> = ({ className, desc, fill, size, title }) => (
   <svg
-    className="rl-circle"
+    className={className || 'rl-circle'}
     height={size}
     fill={fill}
     role="img"
