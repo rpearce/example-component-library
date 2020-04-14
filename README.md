@@ -67,3 +67,9 @@ Component CSS can be imported like this:
 ```js
 import 'mylib/dist/css/Circle/styles.css'
 ```
+
+If you wish to import _all_ components' CSS:
+
+```js
+import 'mylib/dist/css/styles.css'
+```
