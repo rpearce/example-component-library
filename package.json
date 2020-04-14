@@ -22,7 +22,7 @@
   ],
   "scripts": {
     "build": "run-s clean build:js build:css build:docs",
-    "build:css": "./scripts/buildStyles",
+    "build:css": "./scripts/buildCSS",
     "build:docs": "mkdir -p docs && build-storybook -o docs",
     "build:js": "run-p build:js:cjs build:js:esm build:js:umd",
     "build:js:cjs": "tsc -p tsconfig.cjs.json",

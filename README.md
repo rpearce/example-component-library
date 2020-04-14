@@ -9,6 +9,7 @@ $ yarn build
 ```
 
 ## Examples
+* [storybook example output](https://rpearce.github.io/example-component-library/)
 * [create-react-app](./examples/create-react-app)
 * [gatsby](./examples/gatsby)
 
