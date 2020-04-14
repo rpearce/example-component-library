@@ -1,11 +1,11 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import axe from 'axe-core'
-import Rect from './index'
+import Rectangle from './index'
 
 test('with all props', () => {
   const { asFragment } = render(
-    <Rect
+    <Rectangle
       desc="A rectangle that is 4 times taller than it is wide"
       height={600}
       title="Minimalist building"
@@ -17,14 +17,14 @@ test('with all props', () => {
 })
 
 test('without title & desc', () => {
-  const { asFragment } = render(<Rect height={600} width={150} />)
+  const { asFragment } = render(<Rectangle height={600} width={150} />)
 
   expect(asFragment()).toMatchSnapshot()
 })
 
 test('is accessible with all props', (done) => {
   const { container } = render(
-    <Rect
+    <Rectangle
       desc="A rectangle that is 4 times taller than it is wide"
       height={600}
       title="Minimalist building"
@@ -41,7 +41,7 @@ test('is accessible with all props', (done) => {
 
 test('is inaccessible without title', (done) => {
   const { container } = render(
-    <Rect
+    <Rectangle
       desc="A rectangle that is 4 times taller than it is wide"
       height={600}
       width={150}

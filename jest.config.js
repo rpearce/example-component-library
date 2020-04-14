@@ -10,6 +10,6 @@ module.exports = {
   moduleNameMapper: {},
   preset: 'ts-jest',
   setupFilesAfterEnv: ['<rootDir>/testSetup.ts'],
-  testPathIgnorePatterns: ['dist/'],
+  testPathIgnorePatterns: ['dist/', 'examples/'],
   verbose: true,
 }
