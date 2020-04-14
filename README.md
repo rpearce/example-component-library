@@ -8,6 +8,10 @@ Example repository for a shared React components library
 $ yarn build
 ```
 
+## Examples
+* [create-react-app](./examples/create-react-app)
+* [gatsby](./examples/gatsby)
+
 ## Component Structure
 
 ```
