@@ -15,7 +15,7 @@ $ yarn build
 ## Component Structure
 
 ```
-MyComponent
+Circle
 ├── __snapshots__
 │   └── test.tsx.snap
 ├── index.tsx
@@ -25,7 +25,7 @@ MyComponent
 ```
 
 The component and everything to do with it are co-located in the
-`source/MyComponent/` folder:
+`source/Circle/` folder:
 * `index` component file (and any additional component files)
 * stories
 * CSS
@@ -49,21 +49,21 @@ Component JavaScript can be imported in a few different ways:
 
 ```js
 // importing from the index file
-import { MyComponent } from 'mylib'
+import { Circle } from 'mylib'
 
 // import directly from the esm build
-import MyComponent from 'mylib/dist/esm/MyComponent'
+import Circle from 'mylib/dist/esm/Circle'
 
 // import directly from the commonjs build
-import MyComponent from 'mylib/dist/csj/MyComponent'
+import Circle from 'mylib/dist/cjs/Circle'
 
 // import directly from the umd build
-import MyComponent from 'mylib/dist/umd/MyComponent'
+import Circle from 'mylib/dist/umd/Circle'
 ```
 
 ### CSS
 Component CSS can be imported like this:
 
 ```js
-import 'mylib/dist/css/MyComponent.css'
+import 'mylib/dist/css/Circle/styles.css'
 ```
