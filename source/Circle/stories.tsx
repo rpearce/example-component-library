@@ -11,4 +11,11 @@ const stories = storiesOf('Circle', module)
 stories.addDecorator(withA11y)
 stories.addDecorator(withKnobs)
 
-stories.add('default', () => <Circle size={150} />)
+stories.add('default', () => (
+  <Circle
+    desc={text('desc', 'A blue circle')}
+    fill={color('fill', '#7ed6df')}
+    size={number('size', 200)}
+    title={text('title', 'Abstract water planet')}
+  />
+))

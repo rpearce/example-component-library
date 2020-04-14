@@ -11,4 +11,14 @@ const stories = storiesOf('Rectangle', module)
 stories.addDecorator(withA11y)
 stories.addDecorator(withKnobs)
 
-stories.add('default', () => <Rectangle height={100} width={400} />)
+stories.add('default', () => (
+  <Rectangle
+    desc={text('desc', 'A rectangle that is 4 times wider than it is tall')}
+    fill={color('fill', '#30336b')}
+    height={number('height', 100)}
+    width={number('width', 400)}
+    title={text('title', 'Minimalist fallen structure')}
+  />
+))
+
+

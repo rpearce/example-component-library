@@ -2,14 +2,16 @@ import React, { FC } from 'react'
 
 interface Props {
   desc?: string
+  fill?: string
   height: number
   title?: string
   width: number
 }
 
-const Rectangle: FC<Props> = ({ desc, height, title, width }) => (
+const Rectangle: FC<Props> = ({ desc, fill, height, title, width }) => (
   <svg
     className="rl-rect"
+    fill={fill}
     height={height}
     role="img"
     viewBox={`0 0 ${width} ${height}`}
