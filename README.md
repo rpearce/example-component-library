@@ -16,32 +16,27 @@ $ yarn build
 ## Component Structure
 
 ```
-Circle
-├── __snapshots__
-│   └── test.tsx.snap
-├── index.tsx
-├── stories.tsx
-├── styles.css
-└── test.tsx
+.
+└── source
+    ├── ComponentA
+        ├── __snapshots__
+        │   └── test.tsx.snap
+        ├── index.tsx
+        ├── stories.tsx
+        ├── styles.css
+        └── test.tsx
+    └── ComponentB
+        └── ...
+    └── ComponentC
+        └── ...
 ```
 
 The component and everything to do with it are co-located in the
-`source/Circle/` folder:
+`source/ComponentA/` folder:
 * `index` component file (and any additional component files)
 * stories
 * CSS
 * tests
-
-## Exports
-All components are exported in `source/index.ts`, and their inclusion here is
-what allows them to get included in the build output in `dist`.
-
-```js
-// source/index.ts
-
-export { default as Circle } from './Circle'
-export { default as Rectangle } from './Rectangle'
-```
 
 ## Importing
 
@@ -74,3 +69,15 @@ If you wish to import _all_ components' CSS:
 ```js
 import 'mylib/dist/css/styles.css'
 ```
+
+## A Note About Exports
+All components are exported in `source/index.ts`, and their inclusion here is
+what allows them to get included in the build output in `dist`.
+
+```js
+// source/index.ts
+
+export { default as Circle } from './Circle'
+export { default as Rectangle } from './Rectangle'
+```
+

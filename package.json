@@ -34,7 +34,7 @@
     "clean": "run-p clean:dist clean:docs",
     "clean:dist": "rm -rf dist",
     "clean:docs": "rm -rf docs",
-    "lint": "eslint . --ext .js,.ts,.tsx",
+    "lint": "eslint .",
     "prepublishOnly": "run-p lint test && yarn build:js",
     "start": "run-s clean:dist build:js:esm && run-p build:js:esm:watch storybook",
     "storybook": "start-storybook -p 6006",

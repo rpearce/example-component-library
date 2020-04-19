@@ -21,7 +21,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-unused-vars': 'error',
     'jsx-quotes': ['error', 'prefer-double'],
-    'jsx-a11y/no-onchange': 'off',
+    'jsx-a11y/no-onchange': 'off', // https://github.com/evcohen/eslint-plugin-jsx-a11y/issues/398
     'no-trailing-spaces': 'error',
     'object-curly-spacing': ['error', 'always'],
     quotes: ['error', 'single', { allowTemplateLiterals: true }],
