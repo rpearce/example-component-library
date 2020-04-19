@@ -21,13 +21,13 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-unused-vars': 'error',
     'jsx-quotes': ['error', 'prefer-double'],
-    'jsx-a11y/no-onchange': 0,
+    'jsx-a11y/no-onchange': 'off',
     'no-trailing-spaces': 'error',
     'object-curly-spacing': ['error', 'always'],
     quotes: ['error', 'single', { allowTemplateLiterals: true }],
     'react-hooks/exhaustive-deps': 'error',
     'react-hooks/rules-of-hooks': 'error',
-    'react/prop-types': 0,
+    'react/prop-types': 'off',
     semi: ['error', 'never'],
   },
   settings: {
