@@ -10,11 +10,17 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div>
-          <Circle desc="A blue circle" size={200} title="Water planet" />
+          <Circle
+            desc="A blue circle"
+            fill="#7ed6df"
+            size={200}
+            title="Water planet"
+          />
         </div>
         <div>
           <Rectangle
             desc="A rectangle that is 4 times taller than it is wide"
+            fill="#30336b"
             height={600}
             title="Minimalist building"
             width={150}
