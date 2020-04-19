@@ -42,10 +42,7 @@
   },
   "devDependencies": {
     "@storybook/addon-a11y": "5.3.18",
-    "@storybook/addon-actions": "5.3.18",
-    "@storybook/addon-docs": "5.3.18",
     "@storybook/addon-knobs": "5.3.18",
-    "@storybook/addon-links": "5.3.18",
     "@storybook/preset-typescript": "3.0.0",
     "@storybook/react": "5.3.18",
     "@testing-library/jest-dom": "5.5.0",
@@ -74,12 +71,13 @@
     "react-dom": "16.13.1",
     "ts-jest": "25.4.0",
     "ts-loader": "7.0.0",
-    "tslib": "1.11.1",
     "typescript": "3.8.3"
   },
   "peerDependencies": {
     "react": "*",
     "react-dom": "*"
   },
-  "dependencies": {}
+  "dependencies": {
+    "tslib": "1.11.1"
+  }
 }
