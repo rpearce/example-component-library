@@ -17,7 +17,9 @@ test('with all props', () => {
 })
 
 test('without title & desc', () => {
-  const { asFragment } = render(<Rectangle height={600} width={150} />)
+  const { asFragment } = render(
+    <Rectangle height={600} title="Minimalist building" width={150} />
+  )
 
   expect(asFragment()).toMatchSnapshot()
 })
@@ -44,9 +46,13 @@ test('is inaccessible without title', (done) => {
     <Rectangle
       desc="A rectangle that is 4 times taller than it is wide"
       height={600}
+      title="Minimalist building"
       width={150}
     />
   )
+
+  // do something very wrong to prove a11y testing
+  container.querySelector('title')?.remove()
 
   axe.run(container, {}, (err, result) => {
     expect(err).toEqual(null)

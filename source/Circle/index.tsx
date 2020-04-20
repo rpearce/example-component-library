@@ -5,7 +5,7 @@ interface Props {
   desc?: string
   fill?: string
   size: number
-  title?: string
+  title: string
 }
 
 const Circle: FC<Props> = ({ className, desc, fill, size, title }) => (
@@ -18,7 +18,7 @@ const Circle: FC<Props> = ({ className, desc, fill, size, title }) => (
     width={size}
     xmlns="http://www.w3.org/2000/svg"
   >
-    {title && <title>{title}</title>}
+    <title>{title}</title>
     {desc && <desc>{desc}</desc>}
     <circle cx="50" cy="50" r="50" />
   </svg>

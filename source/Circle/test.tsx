@@ -16,8 +16,8 @@ test('with all props', () => {
   expect(asFragment()).toMatchSnapshot()
 })
 
-test('without title & desc & fill', () => {
-  const { asFragment } = render(<Circle size={200} />)
+test('without desc & fill', () => {
+  const { asFragment } = render(<Circle title="Water planet" size={200} />)
 
   expect(asFragment()).toMatchSnapshot()
 })
@@ -35,7 +35,12 @@ test('is accessible with all props', (done) => {
 })
 
 test('is inaccessible without title', (done) => {
-  const { container } = render(<Circle desc="A blue circle" size={200} />)
+  const { container } = render(
+    <Circle desc="A blue circle" title="Water circle" size={200} />
+  )
+
+  // do something very wrong to prove a11y testing
+  container.querySelector('title')?.remove()
 
   axe.run(container, {}, (err, result) => {
     expect(err).toEqual(null)

@@ -5,7 +5,7 @@ interface Props {
   desc?: string
   fill?: string
   height: number
-  title?: string
+  title: string
   width: number
 }
 
@@ -26,7 +26,7 @@ const Rectangle: FC<Props> = ({
     width={width}
     xmlns="http://www.w3.org/2000/svg"
   >
-    {title && <title>{title}</title>}
+    <title>{title}</title>
     {desc && <desc>{desc}</desc>}
     <rect width={width} height={height} />
   </svg>
