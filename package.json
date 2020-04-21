@@ -24,6 +24,7 @@
   "scripts": {
     "build": "run-s clean build:js build:css build:docs",
     "build:css": "./scripts/buildCSS",
+    "build:css:watch": "chokidar \"source/**/*.css\" -c \"./scripts/buildCSS\"",
     "build:docs": "mkdir -p docs && build-storybook -o docs",
     "build:js": "run-p build:js:cjs build:js:esm build:js:umd",
     "build:js:cjs": "tsc -p tsconfig.cjs.json",
@@ -36,7 +37,7 @@
     "clean:docs": "rm -rf docs",
     "lint": "eslint .",
     "prepublishOnly": "run-p lint test && yarn build:js",
-    "start": "run-s clean:dist build:js:esm && run-p build:js:esm:watch storybook",
+    "start": "run-s clean:dist build:js:esm build:css && run-p build:js:esm:watch build:css:watch storybook",
     "storybook": "start-storybook -p 6006",
     "test": "jest"
   },
@@ -55,6 +56,7 @@
     "@typescript-eslint/parser": "2.29.0",
     "axe-core": "3.5.3",
     "babel-loader": "8.1.0",
+    "chokidar-cli": "2.1.0",
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.10.1",
     "eslint-plugin-jest": "23.8.2",
