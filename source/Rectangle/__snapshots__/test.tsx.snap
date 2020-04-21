@@ -3,7 +3,7 @@
 exports[`with all props 1`] = `
 <DocumentFragment>
   <svg
-    class="rl-rect"
+    class="class-override"
     height="600"
     role="img"
     viewBox="0 0 150 600"
@@ -24,7 +24,7 @@ exports[`with all props 1`] = `
 </DocumentFragment>
 `;
 
-exports[`without title & desc 1`] = `
+exports[`with only height, title, width 1`] = `
 <DocumentFragment>
   <svg
     class="rl-rect"

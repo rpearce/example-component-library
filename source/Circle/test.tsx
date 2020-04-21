@@ -4,25 +4,42 @@ import axe from 'axe-core'
 import Circle from './index'
 
 test('with all props', () => {
-  const { asFragment } = render(
+  const { asFragment, container, getByText } = render(
     <Circle
+      className="class-override"
       desc="A blue circle"
       fill="#30336b"
       size={200}
       title="Water planet"
     />
   )
+  const svgEl = container.querySelector('svg')
+  const titleEl = getByText('Water planet')
+  const descEl = getByText('A blue circle')
 
+  expect(svgEl).toHaveAttribute('height', '200')
+  expect(svgEl).toHaveAttribute('width', '200')
+  expect(titleEl).toBeInTheDocument()
+  expect(descEl).toBeInTheDocument()
   expect(asFragment()).toMatchSnapshot()
 })
 
-test('without desc & fill', () => {
-  const { asFragment } = render(<Circle title="Water planet" size={200} />)
+test('with only title & size', () => {
+  const { asFragment, container, getByText } = render(
+    <Circle title="Water planet" size={200} />
+  )
+  const svgEl = container.querySelector('svg')
+  const titleEl = getByText('Water planet')
+  const descEl = container.querySelector('desc')
 
+  expect(svgEl).toHaveAttribute('height', '200')
+  expect(svgEl).toHaveAttribute('width', '200')
+  expect(titleEl).toBeInTheDocument()
+  expect(descEl).not.toBeInTheDocument()
   expect(asFragment()).toMatchSnapshot()
 })
 
-test('is accessible with all props', (done) => {
+test('is accessible with title, desc, size', (done) => {
   const { container } = render(
     <Circle desc="A blue circle" size={200} title="Water planet" />
   )

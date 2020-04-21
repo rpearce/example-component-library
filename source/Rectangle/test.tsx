@@ -4,8 +4,9 @@ import axe from 'axe-core'
 import Rectangle from './index'
 
 test('with all props', () => {
-  const { asFragment } = render(
+  const { asFragment, container, getByText } = render(
     <Rectangle
+      className="class-override"
       desc="A rectangle that is 4 times taller than it is wide"
       height={600}
       title="Minimalist building"
@@ -13,18 +14,33 @@ test('with all props', () => {
     />
   )
 
+  const svgEl = container.querySelector('svg')
+  const titleEl = getByText('Minimalist building')
+  const descEl = getByText('A rectangle that is 4 times taller than it is wide')
+
+  expect(svgEl).toHaveAttribute('height', '600')
+  expect(svgEl).toHaveAttribute('width', '150')
+  expect(titleEl).toBeInTheDocument()
+  expect(descEl).toBeInTheDocument()
   expect(asFragment()).toMatchSnapshot()
 })
 
-test('without title & desc', () => {
-  const { asFragment } = render(
+test('with only height, title, width', () => {
+  const { asFragment, container, getByText } = render(
     <Rectangle height={600} title="Minimalist building" width={150} />
   )
+  const svgEl = container.querySelector('svg')
+  const titleEl = getByText('Minimalist building')
+  const descEl = container.querySelector('desc')
 
+  expect(svgEl).toHaveAttribute('height', '600')
+  expect(svgEl).toHaveAttribute('width', '150')
+  expect(titleEl).toBeInTheDocument()
+  expect(descEl).not.toBeInTheDocument()
   expect(asFragment()).toMatchSnapshot()
 })
 
-test('is accessible with all props', (done) => {
+test('is accessible with height, width, title, desc', (done) => {
   const { container } = render(
     <Rectangle
       desc="A rectangle that is 4 times taller than it is wide"

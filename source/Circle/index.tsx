@@ -8,9 +8,15 @@ interface Props {
   title: string
 }
 
-const Circle: FC<Props> = ({ className, desc, fill, size, title }) => (
+const Circle: FC<Props> = ({
+  className = 'rl-circle',
+  desc,
+  fill,
+  size,
+  title,
+}) => (
   <svg
-    className={className || 'rl-circle'}
+    className={className}
     height={size}
     fill={fill}
     role="img"

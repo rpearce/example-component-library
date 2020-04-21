@@ -10,7 +10,7 @@ interface Props {
 }
 
 const Rectangle: FC<Props> = ({
-  className,
+  className = 'rl-rect',
   desc,
   fill,
   height,
@@ -18,7 +18,7 @@ const Rectangle: FC<Props> = ({
   width,
 }) => (
   <svg
-    className={className || 'rl-rect'}
+    className={className}
     fill={fill}
     height={height}
     role="img"
