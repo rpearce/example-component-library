@@ -18,7 +18,7 @@ $ yarn build
 ```
 .
 └── source
-    ├── ComponentA
+    └── ComponentA
         ├── __snapshots__
         │   └── test.tsx.snap
         ├── index.tsx
