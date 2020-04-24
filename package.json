@@ -29,7 +29,7 @@
     "build:js": "run-p build:js:cjs build:js:esm build:js:umd",
     "build:js:cjs": "tsc -p tsconfig.cjs.json",
     "build:js:esm": "tsc -p tsconfig.esm.json",
-    "build:js:esm:watch": "tsc -p tsconfig.cjs.json -w",
+    "build:js:esm:watch": "tsc -p tsconfig.esm.json -w",
     "build:js:umd": "tsc -p tsconfig.umd.json",
     "ci": "run-p lint build test",
     "clean": "run-p clean:dist clean:docs",
