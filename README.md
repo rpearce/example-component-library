@@ -2,18 +2,6 @@
 
 Example repository for a shared React components library
 
-## Building
-
-```
-$ npm run build
-```
-
-## Storybook Examples
-
-```
-$ npm start
-```
-
 ## Examples
 * [storybook example output](https://rpearce.github.io/example-component-library/)
 * [create-react-app](./examples/create-react-app)
@@ -87,3 +75,11 @@ export { default as Circle } from './Circle'
 export { default as Rectangle } from './Rectangle'
 ```
 
+## Developing
+You can look inside `package.json` to see all the scripts, but here are some
+helpful ones:
+
+* Build all the things: `$ npm run build`
+* Run the Storybook examples: `$ npm start`
+* Run the tests: `$ npm test`
+* Run the linter: `$ npm run lint`
