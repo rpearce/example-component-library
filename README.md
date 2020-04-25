@@ -5,7 +5,13 @@ Example repository for a shared React components library
 ## Building
 
 ```
-$ yarn build
+$ npm run build
+```
+
+## Storybook Examples
+
+```
+$ npm start
 ```
 
 ## Examples
