@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-interface Props {
+export interface Props {
   className?: string
   desc?: string
   fill?: string

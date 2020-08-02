@@ -8,8 +8,6 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended',
     'plugin:jsx-a11y/recommended',
   ],
   parserOptions: {
@@ -22,6 +20,15 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'error',
     'jsx-quotes': ['error', 'prefer-double'],
     'jsx-a11y/no-onchange': 'off', // https://github.com/evcohen/eslint-plugin-jsx-a11y/issues/398
+    'max-len': [
+      'error',
+      {
+        code: 80,
+        ignoreComments: true,
+        ignoreTemplateLiterals: true,
+        ignoreStrings: true,
+      }
+    ],
     'no-trailing-spaces': 'error',
     'object-curly-spacing': ['error', 'always'],
     quotes: ['error', 'single', { allowTemplateLiterals: true }],
