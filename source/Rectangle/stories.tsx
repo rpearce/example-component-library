@@ -1,17 +1,15 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { withA11y } from '@storybook/addon-a11y'
-import { color, number, text, withKnobs } from '@storybook/addon-knobs'
-import { Rectangle } from '../../dist/esm'
+import React, { FC } from 'react'
+import { color, number, text } from '@storybook/addon-knobs'
+import { Rectangle } from '../'
 import '../../.storybook/base.css'
 import '../../dist/css/Rectangle/styles.css'
 
-const stories = storiesOf('Rectangle', module)
+export default {
+  title: 'Rectangle',
+  component: Rectangle,
+}
 
-stories.addDecorator(withA11y)
-stories.addDecorator(withKnobs)
-
-stories.add('default', () => (
+export const WithKnobs: FC = () => (
   <Rectangle
     desc={text('desc', 'A rectangle that is 4 times wider than it is tall')}
     fill={color('fill', '#30336b')}
@@ -19,4 +17,4 @@ stories.add('default', () => (
     width={number('width', 400)}
     title={text('title', 'Minimalist fallen structure')}
   />
-))
+)
